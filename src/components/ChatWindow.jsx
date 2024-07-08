@@ -55,6 +55,7 @@ const ChatWindow = ({ onMessagesLoaded }) => {
       fetchMessages();
     }
   }, [chatId, onMessagesLoaded]);
+  console.log("ngd",messages)
 
   return (
     <div className="chat-window">

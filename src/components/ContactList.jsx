@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Avatar, Grid, Button, Typography, Box, Divider,Card } from "@mui/material";
+import { Avatar, Grid, Button, Typography, Box, Divider,Card ,CardContent} from "@mui/material";
 import ChatWindow from "./ChatWindow"; // Import your ChatWindow component
 import { useMediaQuery } from "@mui/material";
 
@@ -95,7 +95,7 @@ const ContactList = ({ onSelectChat }) => {
     }
     return nameParts[0][0];
   };
-
+console.log(selectedChat)
   return (
     <Grid container spacing={2}>
       {/* Contact List Section */}
@@ -171,7 +171,7 @@ const ContactList = ({ onSelectChat }) => {
                   padding: "10px",
                 }}
               >
-                {chats.map((message) => (
+                {selectedChat.messages.map((message) => (
                   <Card
                     key={message.id}
                     variant="outlined"
